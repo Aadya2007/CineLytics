@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CineLytics - A premium movie insights dashboard with stunning visuals, interactive charts, and a Netflix-style streaming platform experience.">
+    <title>CineLytics — Movie Insights Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container" id="app">
+        <!-- ===== LEFT SIDEBAR ===== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <span class="logo-text"><span class="logo-accent">M</span>ovies</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <span class="nav-section-title">MENU</span>
+                    <a href="#" class="nav-item active" data-page="home" id="nav-home">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        <span>Home</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="discover" id="nav-discover">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                        <span>Discovery</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="community" id="nav-community">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        <span>Community</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="coming-soon" id="nav-coming-soon">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>Coming soon</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title">LIBRARY</span>
+                    <a href="#" class="nav-item" data-page="recent" id="nav-recent">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>Recent</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="bookmarked" id="nav-bookmarked">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        <span>Bookmarked</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="top-rated" id="nav-top-rated">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <span>Top rated</span>
+                    </a>
+                    <a href="#" class="nav-item" data-page="download" id="nav-download">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        <span>Download</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="nav-section-title">GENERAL</span>
+                    <a href="#" class="nav-item" data-page="settings" id="nav-settings">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                        <span>Setting</span>
+                    </a>
+                    <a href="#" class="nav-item" id="nav-logout">
+                        <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                        <span>Log out</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main-content" id="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar" id="top-bar">
+                <div class="top-bar-tabs">
+                    <button class="tab-btn active" data-tab="movies" id="tab-movies">Movies</button>
+                    <button class="tab-btn" data-tab="series" id="tab-series">Series</button>
+                    <button class="tab-btn" data-tab="animation" id="tab-animation">Animation</button>
+                </div>
+                <div class="top-bar-search">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <input type="text" class="search-input" placeholder="Type to Search" id="search-input">
+                </div>
+                <div class="top-bar-actions">
+                    <button class="icon-btn notification-btn" id="notification-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                        <span class="notification-dot"></span>
+                    </button>
+                    <div class="user-profile" id="user-profile">
+                        <div class="user-avatar">
+                            <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Kathryn&backgroundColor=b6e3f4" alt="Kathryn Murphy" id="user-avatar-img">
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page: Home -->
+            <div class="page active" id="page-home">
+                <!-- Hero Banner -->
+                <div class="hero-banner" id="hero-banner">
+                    <div class="hero-backdrop" id="hero-backdrop"></div>
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content">
+                        <h1 class="hero-title" id="hero-title">Spider-Man: No Way Home</h1>
+                        <div class="hero-meta" id="hero-meta">
+                            <span class="hero-year">2021</span>
+                            <span class="hero-separator">·</span>
+                            <span class="hero-genres">Action/Sci-Fi</span>
+                        </div>
+                        <div class="hero-actions">
+                            <button class="btn-primary hero-btn" id="hero-watch-btn">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                                Watch Now
+                            </button>
+                            <button class="btn-circle" id="hero-add-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Continue Watching Section -->
+                <section class="content-section" id="continue-watching-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Continue Watching</h2>
+                        <a href="#" class="see-all-link">See all <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg></a>
+                    </div>
+                    <div class="continue-row" id="continue-row">
+                        <!-- Populated by JS -->
+                    </div>
+                </section>
+
+                <!-- Top Rated Section -->
+                <section class="content-section" id="top-rated-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Top Rated</h2>
+                        <a href="#" class="see-all-link">See all <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg></a>
+                    </div>
+                    <div class="movie-row" id="top-rated-row">
+                        <!-- Populated by JS -->
+                    </div>
+                </section>
+
+                <!-- Trending Section -->
+                <section class="content-section" id="trending-section">
+                    <div class="section-header">
+                        <h2 class="section-title">Trending Now</h2>
+                        <a href="#" class="see-all-link">See all <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><polyline points="9 18 15 12 9 6"/></svg></a>
+                    </div>
+                    <div class="movie-row" id="trending-row">
+                        <!-- Populated by JS -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Page: Discover -->
+            <div class="page" id="page-discover">
+                <div class="discover-header">
+                    <h1 class="page-title">Discover Movies</h1>
+                    <p class="page-subtitle">Explore our entire collection</p>
+                </div>
+                <div class="discover-filters" id="discover-filters">
+                    <button class="filter-pill active" data-filter="all">All</button>
+                </div>
+                <div class="card-grid" id="discover-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Page: Community -->
+            <div class="page" id="page-community">
+                <div class="community-header">
+                    <h1 class="page-title">Community</h1>
+                    <p class="page-subtitle">See what others are watching</p>
+                </div>
+                <div class="community-stats" id="community-stats">
+                    <div class="glass-card stat-card">
+                        <div class="stat-value" id="stat-total-movies">0</div>
+                        <div class="stat-label">Total Movies</div>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <div class="stat-value" id="stat-avg-rating">0</div>
+                        <div class="stat-label">Avg Rating</div>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <div class="stat-value" id="stat-avg-runtime">0</div>
+                        <div class="stat-label">Avg Runtime</div>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <div class="stat-value" id="stat-total-revenue">0</div>
+                        <div class="stat-label">Total Revenue</div>
+                    </div>
+                </div>
+                <div class="charts-container">
+                    <div class="glass-card chart-card">
+                        <h3 class="chart-title">Rating Distribution</h3>
+                        <canvas id="chart-ratings" width="500" height="300"></canvas>
+                    </div>
+                    <div class="glass-card chart-card">
+                        <h3 class="chart-title">Movies by Genre</h3>
+                        <canvas id="chart-genres" width="500" height="300"></canvas>
+                    </div>
+                    <div class="glass-card chart-card">
+                        <h3 class="chart-title">Revenue vs Rating</h3>
+                        <canvas id="chart-scatter" width="500" height="300"></canvas>
+                    </div>
+                    <div class="glass-card chart-card">
+                        <h3 class="chart-title">Movies by Year</h3>
+                        <canvas id="chart-years" width="500" height="300"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page: Top Rated -->
+            <div class="page" id="page-top-rated">
+                <div class="discover-header">
+                    <h1 class="page-title">Top Rated Movies</h1>
+                    <p class="page-subtitle">The highest rated movies in our collection</p>
+                </div>
+                <div class="card-grid" id="top-rated-grid">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- Page: Settings -->
+            <div class="page" id="page-settings">
+                <div class="settings-container">
+                    <h1 class="page-title">Settings</h1>
+                    <div class="glass-card settings-card">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3>Dark Mode</h3>
+                                <p>Toggle between dark and light themes</p>
+                            </div>
+                            <label class="toggle-switch" id="theme-toggle">
+                                <input type="checkbox" checked id="theme-checkbox">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-divider"></div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3>Notifications</h3>
+                                <p>Get notified about new releases</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-divider"></div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3>Auto-play Trailers</h3>
+                                <p>Automatically play trailers on hover</p>
+                            </div>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="toggle-slider"></span>
+                            </label>
+                        </div>
+                        <div class="setting-divider"></div>
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <h3>Language</h3>
+                                <p>Choose your preferred language</p>
+                            </div>
+                            <select class="setting-select" id="language-select">
+                                <option value="en">English</option>
+                                <option value="es">Spanish</option>
+                                <option value="fr">French</option>
+                                <option value="hi">Hindi</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="glass-card settings-card">
+                        <h3 class="settings-section-title">About CineLytics</h3>
+                        <p class="settings-about">CineLytics is a premium movie insights dashboard built for cinephiles. Explore top-rated movies, discover hidden gems, and dive deep into movie analytics — all in a beautiful, immersive interface.</p>
+                        <p class="settings-version">Version 1.0.0</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ===== RIGHT PANEL ===== -->
+        <aside class="right-panel" id="right-panel">
+            <div class="right-panel-section user-section">
+                <div class="user-card">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Kathryn&backgroundColor=b6e3f4" alt="User" class="user-card-avatar">
+                    <div class="user-card-info">
+                        <span class="user-card-name">Kathryn Murphy</span>
+                        <span class="user-card-email">KathrynMurph@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-panel-section">
+                <h3 class="right-panel-title">MEDIA SERVICE</h3>
+                <div class="services-list" id="services-list">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <div class="right-panel-section">
+                <h3 class="right-panel-title">GENRE</h3>
+                <div class="genres-list" id="genres-list">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Movie Detail Modal -->
+    <div class="movie-modal-overlay" id="movie-modal-overlay">
+        <div class="movie-modal" id="movie-modal">
+            <button class="modal-close" id="modal-close">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <div class="modal-backdrop" id="modal-backdrop"></div>
+            <div class="modal-content">
+                <div class="modal-poster">
+                    <img src="" alt="" id="modal-poster-img">
+                </div>
+                <div class="modal-details">
+                    <h2 class="modal-title" id="modal-title"></h2>
+                    <div class="modal-meta" id="modal-meta">
+                        <span class="modal-year" id="modal-year"></span>
+                        <span class="modal-runtime" id="modal-runtime"></span>
+                        <span class="modal-certificate" id="modal-certificate"></span>
+                    </div>
+                    <div class="modal-rating-row">
+                        <div class="modal-rating">
+                            <svg viewBox="0 0 24 24" fill="#f5c518" width="20" height="20"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <span id="modal-rating-value"></span>
+                        </div>
+                        <span class="modal-votes" id="modal-votes"></span>
+                    </div>
+                    <div class="modal-genres" id="modal-genres"></div>
+                    <p class="modal-overview" id="modal-overview"></p>
+                    <div class="modal-info-row">
+                        <div class="modal-info-item">
+                            <span class="modal-info-label">Director</span>
+                            <span class="modal-info-value" id="modal-director"></span>
+                        </div>
+                        <div class="modal-info-item">
+                            <span class="modal-info-label">Cast</span>
+                            <span class="modal-info-value" id="modal-cast"></span>
+                        </div>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn-primary" id="modal-watch-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            Watch Now
+                        </button>
+                        <button class="btn-secondary" id="modal-trailer-btn">Trailer</button>
+                        <button class="btn-circle" id="modal-bookmark-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

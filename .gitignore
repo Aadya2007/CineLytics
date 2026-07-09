@@ -1,0 +1,18 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if local server used)
+node_modules/
+package-lock.json
+
+# Logs
+*.log
