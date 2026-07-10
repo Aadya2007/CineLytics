@@ -95,4 +95,4 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ---
 
-<p align="center">Built with ❤️ for cinephiles everywhere</p>
+<p align="center">Built with 💙 for cinephiles everywhere</p>
