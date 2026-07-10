@@ -20,7 +20,7 @@ const MOVIES_DATA = [
     poster: "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
     backdrop: "https://image.tmdb.org/t/p/original/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg",
     mediaService: "Netflix",
-    continueWatching: false,
+    continueWatching: true,
     progress: 0,
     trending: false,
     topRated: true,
