@@ -279,7 +279,7 @@ const MOVIES_DATA = [
     certificate: "PG-13",
     genres: ["Action", "Drama", "Historical"],
     director: "S.S. Rajamouli",
-    cast: ["N.T. Rama Rao Jr.", "Ram Charan", "Ajay Devgn"],
+    cast: ["N.T. Rama Rao Jr.", "Ram Charan", "Ajay Devgn", "Alia Bhatt"],
     overview: "A fictitious story about two legendary revolutionaries and their journey away from home before they began fighting for their country in the 1920s.",
     poster: "https://image.tmdb.org/t/p/w500/nEufeZYoSTpGqz7FaF3bIBMlKHs.jpg",
     backdrop: "https://image.tmdb.org/t/p/original/eTmmGj4Gti1bJIBFnEajBvku.jpg",
