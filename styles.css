@@ -344,12 +344,12 @@ input, textarea {
 }
 
 /* ── Category Tabs ─────────────────────────────────────── */
-.category-tabs {
+.top-bar-tabs {
   display: flex;
   gap: var(--space-xl);
 }
 
-.category-tab {
+.tab-btn {
   position: relative;
   font-size: var(--font-size-base);
   font-weight: 500;
@@ -359,16 +359,16 @@ input, textarea {
   transition: color var(--transition-fast);
 }
 
-.category-tab:hover {
+.tab-btn:hover {
   color: var(--text-primary);
 }
 
-.category-tab.active {
+.tab-btn.active {
   color: var(--text-primary);
   font-weight: 600;
 }
 
-.category-tab.active::after {
+.tab-btn.active::after {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -386,19 +386,18 @@ input, textarea {
 }
 
 /* ── Top-bar Right ─────────────────────────────────────── */
-.top-bar-right {
+.top-bar-actions {
   display: flex;
   align-items: center;
   gap: var(--space-lg);
 }
 
 /* ── Search ────────────────────────────────────────────── */
-.search-box {
+.top-bar-search {
   position: relative;
   width: 260px;
 }
-
-.search-box .search-icon {
+.top-bar-search.search-icon {
   position: absolute;
   left: 14px;
   top: 50%;
@@ -411,7 +410,7 @@ input, textarea {
   height: 18px;
 }
 
-.search-box input {
+.top-bar-search.search-input {
   width: 100%;
   padding: 10px 14px 10px 40px;
   background: var(--bg-input);
@@ -422,17 +421,17 @@ input, textarea {
   transition: all var(--transition-base);
 }
 
-.search-box input::placeholder {
+.top-bar-search.search-input::placeholder {
   color: var(--text-muted);
 }
 
-.search-box input:focus {
+.top-bar-search.search-input:focus {
   border-color: var(--accent-primary);
   background: var(--bg-secondary);
   box-shadow: 0 0 0 3px var(--accent-primary-muted);
 }
 
-.search-box input:focus + .search-icon {
+.top-bar-searcht:focus-within .search-icon {
   color: var(--accent-primary);
 }
 
