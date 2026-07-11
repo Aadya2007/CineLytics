@@ -804,6 +804,7 @@
     function closeModal() {
         const overlay = $('#movie-modal-overlay');
         overlay.classList.remove('active');
+        overlay.style.opacity ='';
         document.body.style.overflow = '';
     }
 
