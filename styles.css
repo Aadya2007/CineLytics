@@ -407,6 +407,8 @@ input, textarea {
   font-size: var(--font-size-base);
   pointer-events: none;
   transition: color var(--transition-fast);
+  width: 18px;
+  height: 18px;
 }
 
 .search-box input {
