@@ -801,10 +801,14 @@
         });
     }
 
+    function openModal(movie) {
+        const overlay = $('#movie-modal-overlay');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
     function closeModal() {
         const overlay = $('#movie-modal-overlay');
-        overlay.classList.remove('active');
-        overlay.style.opacity ='';
+        overlay.classList.remove('open');
         document.body.style.overflow = '';
     }
 
