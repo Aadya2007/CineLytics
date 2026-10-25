@@ -10,9 +10,26 @@ Desktop.ini
 *.swp
 *.swo
 
-# Node modules (if local server used)
+# Node / frontend
 node_modules/
-package-lock.json
+dist/
+*.local
+
+# Python / backend
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Generated database (rebuild with scripts/build_db.py)
+backend/cinelytics.db
+backend/cinelytics.db-*
+
+# Raw IMDb datasets (download from https://datasets.imdbws.com)
+*.tsv.gz
 
 # Logs
 *.log
+
+# Secrets
+backend/.env

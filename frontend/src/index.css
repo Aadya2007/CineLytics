@@ -1,0 +1,144 @@
+@import 'tailwindcss';
+
+@theme {
+  /* — palette: cinematic dark with violet→fuchsia accent — */
+  --color-ink-950: #07070c;
+  --color-ink-900: #0b0b13;
+  --color-ink-850: #10101a;
+  --color-ink-800: #151521;
+  --color-ink-700: #1d1d2c;
+  --color-ink-600: #292940;
+  --color-ink-500: #3a3a55;
+  --color-mist-400: #8f8fa8;
+  --color-mist-300: #b6b6c9;
+  --color-mist-200: #dcdce6;
+
+  --color-accent-300: #c4b5fd;
+  --color-accent-400: #a78bfa;
+  --color-accent-500: #8b5cf6;
+  --color-accent-600: #7c3aed;
+  --color-flare-500: #d946ef;
+  --color-gold-400: #f5c518;
+  --color-mint-400: #34d399;
+
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  --shadow-glow: 0 0 40px -12px rgb(139 92 246 / 0.45);
+  --shadow-card: 0 12px 32px -12px rgb(0 0 0 / 0.65);
+
+  --animate-fade-up: fade-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-shimmer: shimmer 1.6s linear infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes shimmer {
+    from {
+      background-position: -200% 0;
+    }
+    to {
+      background-position: 200% 0;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-950 font-sans text-mist-200 antialiased;
+  background-image:
+    radial-gradient(1200px 600px at 85% -10%, rgb(124 58 237 / 0.09), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, rgb(217 70 239 / 0.06), transparent 55%);
+  background-attachment: fixed;
+}
+
+/* film-grain overlay for depth */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: rgb(139 92 246 / 0.4);
+}
+
+/* — thin themed scrollbar — */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ink-600) transparent;
+}
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--color-ink-600);
+  border-radius: 8px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@utility glass {
+  background: color-mix(in oklab, var(--color-ink-850) 72%, transparent);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgb(255 255 255 / 0.06);
+}
+
+@utility gradient-text {
+  background: linear-gradient(100deg, var(--color-accent-400), var(--color-flare-500) 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility card-surface {
+  @apply rounded-2xl border border-white/[0.06] bg-ink-850/80 shadow-card;
+}
+
+@utility skeleton {
+  @apply animate-pulse rounded-xl bg-ink-700/60;
+}
+
+/* range input theming */
+input[type='range'] {
+  @apply h-1.5 w-full cursor-pointer appearance-none rounded-full bg-ink-600;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, var(--color-accent-400), var(--color-flare-500));
+    box-shadow: 0 0 0 4px rgb(139 92 246 / 0.18);
+    border: none;
+  }
+  &::-moz-range-thumb {
+    height: 16px;
+    width: 16px;
+    border: none;
+    border-radius: 9999px;
+    background: linear-gradient(135deg, var(--color-accent-400), var(--color-flare-500));
+  }
+}
