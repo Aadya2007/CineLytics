@@ -1,5 +1,12 @@
 ﻿# 🎬 Cinelytics — Movie Insights Platform
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Cinelytics-e50914?style=for-the-badge&logo=render&logoColor=white)](https://cinelytics-zjm6.onrender.com/)
+[![API Docs](https://img.shields.io/badge/OpenAPI-Swagger%20UI-008080?style=for-the-badge&logo=fastapi&logoColor=white)](https://cinelytics-zjm6.onrender.com/docs)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
+> 🚀 **Live Demo:** Explore the live platform at **[https://cinelytics-zjm6.onrender.com/](https://cinelytics-zjm6.onrender.com/)**  
+> 📖 **API Docs:** Interactive OpenAPI docs available at **[https://cinelytics-zjm6.onrender.com/docs](https://cinelytics-zjm6.onrender.com/docs)**
+
 A full-stack movie analytics platform built on the **official IMDb datasets** — 137,000+
 real theatrical movies with verified ratings, vote counts, runtimes, genres and named
 directors. Search it, filter it, chart it, and get content-based recommendations.
@@ -17,7 +24,7 @@ Deploy the entire platform (FastAPI backend + React frontend + SQLite dataset) w
 1. Sign up or log in to [**Render.com**](https://render.com) with your GitHub account (**Aadya2007**).
 2. Click **New +** -> **Web Service**.
 3. Select your repository: **Aadya2007/CineLytics**.
-4. Render will automatically detect ender.yaml and configure:
+4. Render will automatically detect render.yaml and configure:
    - **Environment**: Docker
    - **Plan**: Free
 5. Click **Deploy Web Service**!
