@@ -1,4 +1,4 @@
-# 🎬 Cinelytics — Movie Insights Platform
+﻿# 🎬 Cinelytics — Movie Insights Platform
 
 A full-stack movie analytics platform built on the **official IMDb datasets** — 137,000+
 real theatrical movies with verified ratings, vote counts, runtimes, genres and named
@@ -7,6 +7,22 @@ directors. Search it, filter it, chart it, and get content-based recommendations
 > **v2 rewrite.** Cinelytics started as a 30-movie vanilla-JS page (v1) and a 60-row
 > Streamlit dashboard (v0). This version is a proper data product: a Python ETL
 > pipeline, a FastAPI service, and a React 19 + TypeScript front-end.
+
+---
+
+## 🌐 Deploy to Render (100% Free)
+
+Deploy the entire platform (FastAPI backend + React frontend + SQLite dataset) with a single click:
+
+1. Sign up or log in to [**Render.com**](https://render.com) with your GitHub account (**Aadya2007**).
+2. Click **New +** -> **Web Service**.
+3. Select your repository: **Aadya2007/CineLytics**.
+4. Render will automatically detect ender.yaml and configure:
+   - **Environment**: Docker
+   - **Plan**: Free
+5. Click **Deploy Web Service**!
+
+Render will build and give you a free live URL (e.g. `https://cinelytics.onrender.com`).
 
 ---
 

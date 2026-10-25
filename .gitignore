@@ -21,9 +21,9 @@ venv/
 __pycache__/
 *.pyc
 
-# Generated database (rebuild with scripts/build_db.py)
-backend/cinelytics.db
-backend/cinelytics.db-*
+# Generated database journal files
+backend/cinelytics.db-wal
+backend/cinelytics.db-shm
 
 # Raw IMDb datasets (download from https://datasets.imdbws.com)
 *.tsv.gz

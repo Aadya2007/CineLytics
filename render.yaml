@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: cinelytics
+    env: docker
+    dockerfilePath: Dockerfile
+    plan: free
+    healthCheckPath: /api/health
